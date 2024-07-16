@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:app/about.dart';
+// import 'package:app/drawer.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -67,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
               vertical: 30,
               horizontal: 10,
             ),
-            color: Color.fromARGB(255, 4, 3, 3),
+            color: const Color.fromARGB(255, 4, 3, 3),
             child: Column(
               children: [
                 const Row(
@@ -75,84 +79,161 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Icon(
                       Icons.settings,
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 227, 72, 72),
+                    ),
+                     SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      Icons.cabin,
+                      color: Color.fromARGB(255, 203, 69, 69),
                     ),
                     SizedBox(
                       width: 20,
                     ),
                     Icon(
-                      Icons.cabin,
-                      color: Colors.white,
-                    ),
-                     SizedBox(
-                      width: 20,
-                    ),
-                    Icon(
                       Icons.message,
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 162, 56, 56),
                     ),
-                     SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
                   ],
                 ),
                 Row(
                   children: [
-                   ClipOval(
-                    child:  Image.network('https://scontent-bkk1-1.xx.fbcdn.net/v/t39.30808-1/317232347_3206733259590165_4537751438105400688_n.jpg?stp=dst-jpg_p160x160&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=C-dUkHIkPT0Q7kNvgHZP1--&_nc_ht=scontent-bkk1-1.xx&oh=00_AYB-gIxrp2VqqLru3wclpIz2CYVhg6uH1XhZezUgAPt3mw&oe=6692DCF8',
-                    width: 100,
-                    height: 100,
-                    )
-                   ),
-                    SizedBox(
+                    ClipOval(
+                        child: Image.network(
+                      'https://scontent.fubp1-1.fna.fbcdn.net/v/t39.30808-6/317232347_3206733259590165_4537751438105400688_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=BXcEr67aNvoQ7kNvgFGz9rJ&_nc_ht=scontent.fubp1-1.fna&oh=00_AYC1nB0sQBF7KlFm-u2acsS8X3Wtgr5v5DPhnid4XKy7mA&oe=669C6236',
+                      width: 100,
+                      height: 100,
+                    )),
+                    const SizedBox(
                       width: 20,
                     ),
-                   const Column(
-                    children: [
-                      Text("Precha Chainara",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                      ),
-                      Text("JK-CHanG",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "ผู้ติดตาม 200k | กำลังติดตาม 0",
-                            style: TextStyle(color: Color.fromARGB(255, 244, 242, 242),)
-                          )
-                        ],
-                      )
-                    ],
-                   )
+                     const Column(
+                      children: [
+                        Text(
+                          "Precha Chainara",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Text(
+                          "JK-CHanG",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                        Text("ผู้ติดตาม 200k | กำลังติดตาม 0",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 244, 242, 242),
+                                )),
+                          ],
+                        )
+                      ],
+                    )
                   ],
                 )
               ],
             ),
+            
           ),
           Container(
             padding: const EdgeInsets.symmetric(
               vertical: 5,
               horizontal: 10,
             ),
-            color: Color.fromARGB(255, 232, 5, 5),
+            color: const Color.fromARGB(255, 232, 5, 5),
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(
-              vertical: 30,
-              horizontal: 10,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "MR.Precha Chainara",
+                      style: TextStyle(fontSize: 24),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.facebook,
+                          color: Colors.blue,
+                          size: 40,
+                        ),
+                        Text("facebook"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.phone,
+                          color: Colors.blue,
+                          size: 40,
+                        ),
+                        Text("Phone"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.share,
+                          color: Colors.blue,
+                          size: 40,
+                        ),
+                        Text("Share"),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                const Divider(),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "คนฮ๊อตวิทยาการคอมพิวเตอร์",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.to(const AboutPage());
+                      },
+                      child: const Text('About Me'),
+                    )
+                  ],
+                )
+              ],
             ),
-            color: Color.fromARGB(255, 4, 3, 3),
+          ),
         ],
       ),
     );
   }
 }
+
+
+
+
