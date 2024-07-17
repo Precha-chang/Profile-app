@@ -1,4 +1,5 @@
 
+import 'package:app/grid.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:app/about.dart';
@@ -38,6 +39,12 @@ class _MyDrawerState extends State<MyDrawer> {
             title: const Text('About Me'),
             onTap: () {
               Get.to(const AboutPage());
+            },
+          ),
+          ListTile(
+            title: const Text('Grid view'),
+            onTap: () {
+              Get.to(const GridPage());
             },
           ),
         ],
