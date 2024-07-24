@@ -25,7 +25,7 @@ class _AboutPageState extends State<AboutPage> {
               border: Border.all(color: Colors.black),
               borderRadius: BorderRadius.circular(10),
             ),
-            margin: EdgeInsets.all(8),
+            margin: const EdgeInsets.all(8),
             child: GFListTile(
               // leading: const Icon(Icons.add),
               titleText: (items[index]),

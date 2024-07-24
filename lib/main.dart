@@ -66,9 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My List"),
+        title: const Text("My List"),
       ),
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
       body: Column(
         children: [
           Container(
